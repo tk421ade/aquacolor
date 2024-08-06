@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txtVideoName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="bold" />
+
+        <Button
+                android:id="@+id/oneTimeOpenVideo"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Open Video"
+                android:textColor="@color/purple_700" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="fill_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonSubMax"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="&lt;&lt;&lt;"
+                android:textColor="@color/purple_700" />
+
+            <Button
+                android:id="@+id/buttonSubMed"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="&lt;&lt;"
+                android:textColor="@color/purple_700" />
+
+            <Button
+                android:id="@+id/buttonSubMin"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="&lt;"
+                android:textColor="@color/purple_700" />
+
+            <Button
+                android:id="@+id/buttonAddMin"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="&gt;"
+                android:textColor="@color/purple_700" />
+
+            <Button
+                android:id="@+id/buttonAddMed"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="&gt;&gt;"
+                android:textColor="@color/purple_700" />
+
+            <Button
+                android:id="@+id/buttonAddMax"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="&gt;&gt;&gt;"
+                android:textColor="@color/purple_700" />
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seekBarPosition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dip" />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="16dp">
+
+            <VideoView
+                    android:id="@+id/videoView"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="0dp"
+                    android:layout_weight="4"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter" />
+
+            <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="0dp"
+                    android:layout_weight="4"
+                    android:adjustViewBounds="false"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="fitCenter" />
+
+            <ProgressBar
+                    android:id="@+id/imageProgressBar"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:indeterminate="true"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp" />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:orientation="horizontal">
+                <Button
+                        android:id="@+id/menuSaveFrame"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Save Frame"
+                        android:textColor="@color/purple_700" />
+
+                <Button
+                        android:id="@+id/menuSaveVideo"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Convert Video"
+                        android:textColor="@color/purple_700" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,2 @@
+ninja: Entering directory `/home/tk421/code/scuba-video-converter/libraries/opencv/.cxx/cmake/debug/x86'
+ninja: no work to do.

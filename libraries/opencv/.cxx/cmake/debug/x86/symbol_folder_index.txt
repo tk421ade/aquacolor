@@ -1,0 +1,1 @@
+/home/tk421/code/scuba-video-converter/libraries/opencv/build/intermediates/cmake/debug/obj/x86

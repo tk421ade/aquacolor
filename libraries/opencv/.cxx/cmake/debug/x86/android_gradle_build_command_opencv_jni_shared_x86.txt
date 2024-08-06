@@ -1,0 +1,7 @@
+Executable : /home/tk421/Android/Sdk/cmake/3.10.2.4988404/bin/ninja
+arguments : 
+-C
+/home/tk421/code/scuba-video-converter/libraries/opencv/.cxx/cmake/debug/x86
+opencv_jni_shared
+jvmArgs : 
+

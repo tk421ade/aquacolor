@@ -1,0 +1,80 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+android {
+    signingConfigs {
+        'default' {
+            File keystoreConfigFile = file('keystore.config')
+            if (keystoreConfigFile.exists()) {
+                Properties keystoreProps = new Properties()
+                keystoreProps.load(new FileInputStream(file('keystore.config')))
+
+                keyAlias keystoreProps['keyAlias']
+                keyPassword keystoreProps['keyPassword']
+                storePassword keystoreProps['storePassword']
+                storeFile file(keystoreProps['storePath'])
+            }
+        }
+    }
+
+    compileSdkVersion 31
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.rubio.converter"
+        minSdkVersion 28
+        targetSdkVersion 30
+        versionCode 3
+        versionName '1.3'
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            if (file('keystore.config').exists()) {
+                signingConfig signingConfigs.'default'
+            }
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        dataBinding true
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    //2 files found for path lib/arm64-v8a/libc++_shared.so. This version of the Android Gradle Plugin chooses the f
+    packagingOptions {
+        pickFirst 'lib/x86/libc++_shared.so'
+        pickFirst 'lib/x86_64/libc++_shared.so'
+        pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+        pickFirst 'lib/arm64-v8a/libc++_shared.so'
+    }
+}
+
+dependencies {
+    implementation project(':libraries:opencv')
+    implementation 'com.arthenica:ffmpeg-kit-full:6.0-2'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation "androidx.documentfile:documentfile:1.0.1"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2-native-mt"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9"
+}

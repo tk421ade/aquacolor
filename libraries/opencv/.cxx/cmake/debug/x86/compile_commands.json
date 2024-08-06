@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/tk421/code/scuba-video-converter/libraries/opencv/.cxx/cmake/debug/x86",
+  "command": "/home/tk421/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=i686-none-linux-android28 --gcc-toolchain=/home/tk421/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/tk421/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/linux-x86_64/sysroot    -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/opencv_jni_shared.dir/dummy.cpp.o -c /home/tk421/code/scuba-video-converter/libraries/opencv/libcxx_helper/dummy.cpp",
+  "file": "/home/tk421/code/scuba-video-converter/libraries/opencv/libcxx_helper/dummy.cpp"
+}
+]

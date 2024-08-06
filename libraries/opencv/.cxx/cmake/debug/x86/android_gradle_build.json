@@ -1,0 +1,39 @@
+{
+  "stringTable": {},
+  "buildFiles": [
+    "/home/tk421/code/scuba-video-converter/libraries/opencv/libcxx_helper/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/home/tk421/Android/Sdk/cmake/3.10.2.4988404/bin/ninja",
+      "-C",
+      "/home/tk421/code/scuba-video-converter/libraries/opencv/.cxx/cmake/debug/x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/home/tk421/Android/Sdk/cmake/3.10.2.4988404/bin/ninja",
+    "-C",
+    "/home/tk421/code/scuba-video-converter/libraries/opencv/.cxx/cmake/debug/x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "opencv_jni_shared-Debug-x86": {
+      "buildCommandComponents": [
+        "/home/tk421/Android/Sdk/cmake/3.10.2.4988404/bin/ninja",
+        "-C",
+        "/home/tk421/code/scuba-video-converter/libraries/opencv/.cxx/cmake/debug/x86",
+        "opencv_jni_shared"
+      ],
+      "buildType": "debug",
+      "abi": "x86",
+      "artifactName": "opencv_jni_shared",
+      "output": "/home/tk421/code/scuba-video-converter/libraries/opencv/.cxx/cmake/debug/x86/libopencv_jni_shared.a"
+    }
+  },
+  "toolchains": {},
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

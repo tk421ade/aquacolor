@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ConversionActivity">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="16dp">
+            <ProgressBar
+                    android:id="@+id/conversionProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:minHeight="50dp"
+                    android:progress="1"
+            />
+            <TextView
+                    android:id="@+id/txtProgress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewStart"
+                    android:text="0/100"
+            />
+            <TextView
+                    android:id="@+id/txtInspirational"
+                    android:layout_width="match_parent"
+                    android:layout_height="66dp"
+                    android:textAlignment="viewStart"
+                    android:layout_marginTop="20dp"
+                    android:text="Don't close this window"
+            />
+            <Button
+                    android:id="@+id/startAgain"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/purple_700"
+                    android:text="Convert More Videos"
+                    android:visibility="invisible"
+            />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
